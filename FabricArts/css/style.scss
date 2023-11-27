@@ -1,0 +1,317 @@
+$color-text: #898989;
+
+@mixin inner($w: 73%, $mw: 1600px) {
+    width: $w;
+    max-width: $mw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    color: $color-text;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: (20/12);
+    letter-spacing: (50/1000)*100;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.header {
+    margin-top: 70px;
+    margin-bottom: 100px;
+
+    &__inner {
+        @include inner();
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .gnav {
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__item {
+            padding-left: 30px;
+        }
+
+        &__link {
+            color: #000;
+            font-size: 14px;
+            line-height: (24/14);
+            text-decoration: none;
+        }
+    }
+}
+
+.main {
+    img {
+        object-fit: cover;
+    }
+
+    .works {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        &__inner {
+            @include inner();
+        }
+
+        &__title {
+            font-size: 38px;
+            line-height: (49/38);
+            color: #000;
+            font-weight: normal;
+            margin-top: 20px;
+        }
+
+        &__title::after {
+            content: "";
+            display: block;
+            width: 120px;
+            margin-top: 30px;
+            border-bottom: 1px solid;
+        }
+
+        &__text {
+            padding-top: 60px;
+            font-size: 14px;
+            margin-bottom: 40px;
+
+            &__english {
+                margin-bottom: 59px;
+            }
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__item {
+            width: (370/1170)*100%;
+        }
+
+        &__pic {
+            margin-bottom: 30px;
+        }
+
+        .post {
+            &__title {
+                color: #000;
+                margin-bottom: 15px;
+                font-size: 20px;
+                font-weight: normal;
+                line-height: (26/20);
+            }
+
+            &__category {
+                color: #898989;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .project {
+        background-color: #FDF8EB;
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        &__inner {
+            @include inner();
+        }
+
+        &__title {
+            font-size: 38px;
+            line-height: (49/38);
+            color: #000;
+            font-weight: normal;
+            margin-top: 20px;
+        }
+
+        &__title::after {
+            content: "";
+            display: block;
+            width: 120px;
+            margin-top: 30px;
+            border-bottom: 1px solid;
+        }
+
+        &__text {
+            padding-top: 60px;
+            font-size: 14px;
+            margin-bottom: 40px;
+
+
+            &__english {
+                margin-bottom: 59px;
+            }
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__item {
+            width: (560/1170)*100%;
+        }
+
+        .post {
+            &__name {
+                padding: 5px 10px;
+                display: inline-block;
+                background-color: #E40065;
+                color: #fff;
+                margin: 30px 0;
+                font-size: 12px;
+                border-radius: 15px;
+            }
+
+            &__text {
+                color: #000;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: (34/20);
+            }
+        }
+    }
+
+    .conpany {
+
+        &__inner {
+            @include inner();
+        }
+
+        &__title {
+            font-size: 38px;
+            line-height: (49/38);
+            color: #000;
+            font-weight: normal;
+            margin-bottom: 30px;
+            margin-top: 20px;
+        }
+
+        &__title::after {
+            display: block;
+            width: 120px;
+            content: "";
+            border-bottom: #000 solid 1px;
+        }
+
+        &__text {
+            font-size: 14px;
+            margin-bottom: 40px;
+
+            &__all {
+                width: (700/1170)*100%;
+            }
+        }
+
+        &__hoge {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+
+        .post {
+            &__name {
+                padding: 5px 10px;
+                display: inline-block;
+                background-color: #E40065;
+                color: #fff;
+                margin: 30px 0;
+                font-size: 12px;
+                border-radius: 15px;
+            }
+
+            &__text {
+                font-size: 20px;
+                color: #fff;
+                line-height: (34/20);
+            }
+
+            &__item {
+                color: #fff;
+            }
+
+            .daiiti {
+                margin-bottom: 60px;
+                padding: 150px 80px 160px;
+                background: url(../images/bg_project01.jpg) no-repeat center/cover;
+            }
+
+            .imai {
+                margin-bottom: 60px;
+                padding: 150px 80px 160px;
+                background: url(../images/bg_project02.jpg) no-repeat center/cover;
+            }
+
+        }
+    }
+
+    .guide {
+        background-color: #FDF8EB;
+        padding: 100px 0;
+
+        &__inner {
+            @include inner();
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card {
+            width: (370/1170)*100%;
+
+            &__title {
+                margin-top: 30px;
+                color: #000;
+                margin-bottom: 15px;
+                font-size: 20px;
+                font-weight: normal;
+                line-height: (26/20);
+            }
+
+            &__caption {
+                color: $color-text;
+                font-size: 12px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+}
+
+.footer {
+    padding: 78px 0 200px;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__copy {
+        display: block;
+        font-weight: bold;
+        text-align: right;
+    }
+}
